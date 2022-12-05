@@ -11,48 +11,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;500&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="styles/hamburgers.min.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
   <script src="./app.js" defer></script>
 </head>
 
 <body class="font-primary">
   <!--Container-->
-  <div class="h-screen bg-main relative flex justify-center items-center">
+  <div class="h-screen bg-main flex flex-col">
+    <nav class="bg-primary flex justify-center text-white py-4">
+      <div class="max-w-[80%] w-[80%] lg:flex lg:justify-between lg:items-center">
 
-    <!--Navbar-->
-    <nav class="flex justify-center w-full bg-primary text-white p-5 shadow-lg absolute top-0 left-0">
+        <!--Logo and toggle button container-->
+        <div class="flex justify-between items-center lg:block">
+          <a href="" class="text-lg">CodeBurger</a>
 
-      <!--Navbar Container-->
-      <div class="flex justify-between items-center flex-wrap lg:w-4/5 w-[90%] flex-col lg:flex-row">
-        <div class="flex items-center justify-between w-full lg:block">
-          <a href="" class="text-xl">CodeBurger</a>
-
-          <button class="lg:hidden" id="toggler">
-            <svg viewBox="0 0 100 80" width="40" height="40" fill="#fff">
-              <rect width="100" height="10"></rect>
-              <rect y="30" width="100" height="10"></rect>
-              <rect y="60" width="100" height="10"></rect>
-            </svg>
-          </button>
+          <!--Menu toggler-->
+          <div class="lg:hidden">
+            <button class="hamburger hamburger--spin p-0" type="button" id="toggler">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
         </div>
 
-        <div class="flex items-center lg:gap-12 gap-6 flex-col lg:flex-row w-full" id="target">
-          <ul class="lg:flex justify-start gap-6 lg:text-sm text-md w-full">
-            <li class="my-3"><a href="">Home</a></li>
-            <li class="my-3"><a href="">Courses</a></li>
-            <li class="my-3"><a href="">Pricing</a></li>
+        <!-- Menu Container-->
+        <div class="hidden lg:flex lg:items-center lg:gap-8" id="target">
+
+          <!--Menu-->
+          <ul class="lg:flex lg:gap-4">
+            <li class="py-2 group"><a href="" class="group-hover:text-slate-400">Home</a></li>
+            <li class="py-2 group"><a href="" class="group-hover:text-slate-400">Courses</a></li>
+            <li class="py-2 group"><a href="" class="group-hover:text-slate-400">Pricing</a></li>
           </ul>
 
-          <div class="lg:flex items-center gap-2 text-sm">
-            <a href="" class="border border-slate-400 px-6 py-1.5 rounded-full hover:bg-slate-400">Log In</a>
-            <a href="" class="bg-second py-1.5 px-6 rounded-full">Sign Up</a>
+          <!--Login/Signup Buttons-->
+          <div class="mt-4 gap-4 lg:flex lg:gap-4 lg:mt-0">
+            <a href="" class="block py-1 px-6 rounded-full border text-center">Log In</a>
+            <a href="" class="block py-1 px-6 rounded-full bg-second mt-4 lg:mt-0 text-center">Sign Up</a>
           </div>
         </div>
       </div>
     </nav>
 
     <!--Hero Section-->
-    <div class="flex justify-between items-center w-4/5 mx-auto text-white h-auto flex-wrap">
+    <div class="flex justify-between items-center w-4/5 mx-auto text-white h-auto flex-wrap grow">
       <!--First Col-->
       <div class="lg:w-[40%] w-full">
         <h1 class="font-second text-5xl md:text-6xl">
